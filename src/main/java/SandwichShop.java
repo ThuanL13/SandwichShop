@@ -1,8 +1,7 @@
-import java.util.Arrays;
 import java.util.Scanner;     // import the Scanner class
-import java.util.*;
 
-public class SandwhichShop {
+
+public class SandwichShop {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         double price = 0.0;
