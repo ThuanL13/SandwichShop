@@ -45,7 +45,6 @@ public class SandwhichShop {
             price = price * over65;
         } else {
             System.out.println("No discount");
-            System.out.println(price);
             }
 
         // Displaying final price
