@@ -21,15 +21,15 @@ public class SandwhichShop {
 
         System.out.println("Would you like to make it a loaded sandwich. Enter 1 for Yes or 2 for No: ");
         int loaded = read.nextInt();
-        if (loaded == 1) {
-            if (size == 1) {
+        if (loaded == 1) { // If yes is chosen
+            if (size == 1) { // If sandwich size is 1 (regular)
                 price += 1.00;
-            } else price += 1.75;
-        } else read.nextLine();
+            } else price += 1.75; // If sandwich size is 2 (large)
+        } else read.nextLine(); // If 2 (no) is chosen, go to next line
 
         // Asking for age
-        double under17 = 0.9; // 10% discount; customer gets the sandwich for 90% of the price
-        double over65 = 0.8; // 20% discount; customer gets the sanwich for 80% of the price
+        double discount10Percent = 0.9; // 10% discount; customer gets the sandwich for 90% of the price
+        double discount20Percent = 0.8; // 20% discount; customer gets the sandwich for 80% of the price
 
         // Asking for age
         System.out.println("How old are you?: ");
@@ -39,10 +39,10 @@ public class SandwhichShop {
         // Applying discounts
         if (age <= 17) {
             System.out.println("You get a 10% discount!");
-            price = price * under17;
+            price = price * discount10Percent;
         } else if (age > 65) {
             System.out.println("You get a 20% discount!");
-            price = price * over65;
+            price = price * discount20Percent;
         } else {
             System.out.println("No discount");
             }
@@ -50,7 +50,7 @@ public class SandwhichShop {
         // Displaying final price
         System.out.printf("Your total is: $%.2f%n", price);
 
-        read.close();
+        read.close(); // Closing out the scanner
         }
     }
 
